@@ -1,9 +1,21 @@
 {
-  "name": "pascal-utils.js",
+  "name": "pascal-utils",
   "author": "Elhanan Flesch",
-  "description": "",
-  "version": "0.0.1",
+  "description": "Utility functions for compilation of simple pascal programs, with the Free Pascal compiler, in Node.js.",
   "license": "MIT",
+  "version": "0.0.1",
+  "homepage": "https://github.com/synthetic-borealis/pascal-utils.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synthetic-borealis/hirnfick.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/synthetic-borealis/pascal-utils.js/issues"
+  },
+  "keywords": [
+    "Pascal",
+    "Testing"
+  ],
   "main": "lib/index.js",
   "types": "types/index.d.ts",
   "files": [
