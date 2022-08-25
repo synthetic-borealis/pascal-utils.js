@@ -3,7 +3,7 @@
   "author": "Elhanan Flesch",
   "description": "Utility functions for compilation of simple pascal programs, with the Free Pascal compiler, in Node.js.",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/synthetic-borealis/pascal-utils.js",
   "repository": {
     "type": "git",
