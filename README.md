@@ -1,8 +1,11 @@
 # Pascal Utils
-![Tests](https://github.com/synthetic-borealis/pascal-utils.js/actions/workflows/test.yml/badge.svg)
 
+[![npm version](https://badge.fury.io/js/pascal-utils.svg)](https://badge.fury.io/js/pascal-utils)
+![Unit Tests](https://github.com/synthetic-borealis/pascal-utils.js/actions/workflows/test.yml/badge.svg)
+![GitHub](https://img.shields.io/github/license/synthetic-borealis/pascal-utils.js)
 
-Utility functions for compilation of simple pascal programs from Node.js.
+Utility functions for compilation of simple pascal programs with the Free Pascal compiler in
+Node.js.
 
 ## Contents
 
