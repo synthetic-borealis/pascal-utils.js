@@ -1,0 +1,10 @@
+node_modules/
+types/
+docs/
+.idea/
+*.log
+*.exe
+*.dll
+*.so
+*.o
+*.tgz
