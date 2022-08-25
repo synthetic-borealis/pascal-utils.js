@@ -1,4 +1,6 @@
 # Pascal Utils
+![Tests](https://github.com/synthetic-borealis/pascal-utils.js/actions/workflows/test.yml/badge.svg)
+
 
 Utility functions for compilation of simple pascal programs from Node.js.
 
