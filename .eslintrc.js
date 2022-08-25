@@ -8,7 +8,16 @@ module.exports = {
     'airbnb-base',
     'plugin:jest/recommended'
   ],
-  'overrides': [],
+  'overrides': [
+    {
+      'files': [
+        'scripts/**/*.js'
+      ],
+      'rules': {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
+  ],
   'parserOptions': {
     'ecmaVersion': 'latest'
   },
