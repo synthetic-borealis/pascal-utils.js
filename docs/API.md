@@ -10,7 +10,7 @@
 ## Functions
 
 <dl>
-<dt><a href="#checkCompiler">checkCompiler()</a> ⇒ <code>Promise.&lt;{version: string}&gt;</code></dt>
+<dt><a href="#checkCompiler">checkCompiler(compilerName)</a> ⇒ <code>Promise.&lt;{version: string}&gt;</code></dt>
 <dd><p>Checks whether the Free Pascal compiler is present in the system path.</p>
 </dd>
 <dt><a href="#compile">compile(inputFile, outputFile)</a> ⇒ <code>Promise.&lt;{file: string}&gt;</code></dt>
@@ -43,10 +43,15 @@ CompilerNotFoundError constructor.
 
 <a name="checkCompiler"></a>
 
-## checkCompiler() ⇒ <code>Promise.&lt;{version: string}&gt;</code>
+## checkCompiler(compilerName) ⇒ <code>Promise.&lt;{version: string}&gt;</code>
 Checks whether the Free Pascal compiler is present in the system path.
 
 **Kind**: global function  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| compilerName | <code>string</code> | <code>&quot;fpc&quot;</code> | The name of the compiler executable. |
+
 <a name="compile"></a>
 
 ## compile(inputFile, outputFile) ⇒ <code>Promise.&lt;{file: string}&gt;</code>
