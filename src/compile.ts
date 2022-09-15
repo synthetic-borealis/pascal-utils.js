@@ -1,5 +1,5 @@
-const childProcess = require('child_process');
-const CompilationFailedError = require('./errors/compilationFailedError');
+import childProcess, { ExecException } from 'child_process';
+import CompilationFailedError from './errors/compilationFailedError';
 
 /**
  * Compiles a Pascal source file.
@@ -7,9 +7,9 @@ const CompilationFailedError = require('./errors/compilationFailedError');
  * @param {string} outputFile - Output file name (or path).
  * @returns {Promise<{file: string}>}
  */
-function compile(inputFile, outputFile) {
+export default function compile(inputFile: string, outputFile: string): Promise<{ file: string }> {
   return new Promise((resolve, reject) => {
-    childProcess.exec(`fpc "${inputFile}" -o"${outputFile}"`, (error) => {
+    childProcess.exec(`fpc "${inputFile}" -o"${outputFile}"`, (error: ExecException | null) => {
       if (error) {
         reject(new CompilationFailedError(inputFile));
       }
@@ -17,5 +17,3 @@ function compile(inputFile, outputFile) {
     });
   });
 }
-
-module.exports = compile;

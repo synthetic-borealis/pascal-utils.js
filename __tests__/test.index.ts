@@ -1,11 +1,10 @@
-const fs = require('fs/promises');
-const process = require('node:process');
-const {
+import fs from 'fs/promises';
+import {
   CompilerNotFoundError,
   CompilationFailedError,
   checkCompiler,
   compile,
-} = require('../src');
+} from '../src';
 
 describe('Compiler detection', () => {
   const mockFpc = 'node ./assets/mockFpc.js';
@@ -34,8 +33,5 @@ describe('Compilation', () => {
   it('Throws CompilationFailedError when compilation fails', async () => {
     await expect(compile(badSourceFile, badExeName)).rejects.toBeInstanceOf(CompilationFailedError);
   });
-  afterAll(() => Promise.all([
-    fs.unlink('./hello.o'),
-    fs.unlink(helloExeName),
-  ]));
+  afterAll(() => Promise.all([fs.unlink('./hello.o'), fs.unlink(helloExeName)]));
 });

@@ -1,4 +1,4 @@
-class CompilerNotFoundError extends Error {
+export default class CompilerNotFoundError extends Error {
   /**
    * CompilerNotFoundError constructor.
    */
@@ -6,4 +6,3 @@ class CompilerNotFoundError extends Error {
     super('Could not find the Free Pascal compiler');
   }
 }
-module.exports = CompilerNotFoundError;
