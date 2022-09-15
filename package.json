@@ -16,15 +16,15 @@
     "Pascal",
     "Testing"
   ],
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "types": "types/index.d.ts",
   "files": [
-    "lib/",
+    "src/",
     "types/",
     "docs/"
   ],
   "scripts": {
-    "lint": "eslint lib/**/*.js __tests__/**/*.js scripts/**/*.js",
+    "lint": "eslint src/**/*.js",
     "test": "jest",
     "coverage": "jest --coverage",
     "docs": "node scripts/build-docs.js",

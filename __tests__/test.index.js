@@ -5,7 +5,7 @@ const {
   CompilationFailedError,
   checkCompiler,
   compile,
-} = require('../lib');
+} = require('../src');
 
 describe('Compiler detection', () => {
   const mockFpc = 'node ./assets/mockFpc.js';
