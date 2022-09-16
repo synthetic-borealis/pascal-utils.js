@@ -2,7 +2,7 @@ name: Coverage
 on:
   push:
     paths:
-      - 'lib/**/*.ts'
+      - 'src/**/*.ts'
       - '__tests__/**/*.ts'
       - 'package.json'
       - '.github/workflows/coverage.yml'

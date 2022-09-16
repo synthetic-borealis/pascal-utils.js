@@ -2,7 +2,7 @@ name: Unit Tests
 on:
   push:
     paths:
-      - 'lib/**/*.ts'
+      - 'src/**/*.ts'
       - '__tests__/**/*.ts'
       - 'package.json'
       - '.github/workflows/test.yml'
