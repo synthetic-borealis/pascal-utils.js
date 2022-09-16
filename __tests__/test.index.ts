@@ -1,9 +1,9 @@
 import fs from 'fs/promises';
 import {
-  CompilerNotFoundError,
-  CompilationFailedError,
   checkCompiler,
+  CompilationFailedError,
   compile,
+  CompilerNotFoundError,
 } from '../src';
 
 describe('Compiler detection', () => {
