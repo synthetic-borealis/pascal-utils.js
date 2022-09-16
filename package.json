@@ -16,10 +16,10 @@
     "Pascal",
     "Testing"
   ],
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "types": "types/index.d.ts",
   "files": [
-    "src/",
+    "lib/",
     "types/",
     "docs/"
   ],
