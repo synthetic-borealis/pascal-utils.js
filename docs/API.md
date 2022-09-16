@@ -1,66 +1,73 @@
-## Classes
+pascal-utils
 
-<dl>
-<dt><a href="#CompilationFailedError">CompilationFailedError</a></dt>
-<dd></dd>
-<dt><a href="#CompilerNotFoundError">CompilerNotFoundError</a></dt>
-<dd></dd>
-</dl>
+# pascal-utils
 
-## Functions
+## Table of contents
 
-<dl>
-<dt><a href="#checkCompiler">checkCompiler(compilerName)</a> ⇒ <code>Promise.&lt;{version: string}&gt;</code></dt>
-<dd><p>Checks whether the Free Pascal compiler is present in the system path.</p>
-</dd>
-<dt><a href="#compile">compile(inputFile, outputFile)</a> ⇒ <code>Promise.&lt;{file: string}&gt;</code></dt>
-<dd><p>Compiles a Pascal source file.</p>
-</dd>
-</dl>
+### Classes
 
-<a name="CompilationFailedError"></a>
+- [CompilationFailedError](classes/CompilationFailedError.md)
+- [CompilerNotFoundError](classes/CompilerNotFoundError.md)
 
-## CompilationFailedError
-**Kind**: global class  
-<a name="new_CompilationFailedError_new"></a>
+### Compilation Functions
 
-### new CompilationFailedError(fileName)
-CompilationFailedError constructor.
+- [compile](API.md#compile)
 
+### Compiler Detection Functions
 
-| Param | Type | Description |
-| --- | --- | --- |
-| fileName | <code>string</code> | Source file that caused the error. |
+- [checkCompiler](API.md#checkcompiler)
 
-<a name="CompilerNotFoundError"></a>
+## Compilation Functions
 
-## CompilerNotFoundError
-**Kind**: global class  
-<a name="new_CompilerNotFoundError_new"></a>
+### compile
 
-### new CompilerNotFoundError()
-CompilerNotFoundError constructor.
+▸ **compile**(`inputFile`, `outputFile`): `Promise`<{ `file`: `string`  }\>
 
-<a name="checkCompiler"></a>
-
-## checkCompiler(compilerName) ⇒ <code>Promise.&lt;{version: string}&gt;</code>
-Checks whether the Free Pascal compiler is present in the system path.
-
-**Kind**: global function  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| compilerName | <code>string</code> | <code>&quot;fpc&quot;</code> | The name of the compiler executable. |
-
-<a name="compile"></a>
-
-## compile(inputFile, outputFile) ⇒ <code>Promise.&lt;{file: string}&gt;</code>
 Compiles a Pascal source file.
 
-**Kind**: global function  
+**`Throws`**
 
-| Param | Type | Description |
-| --- | --- | --- |
-| inputFile | <code>string</code> | Source file to compile. |
-| outputFile | <code>string</code> | Output file name (or path). |
+[CompilationFailedError](classes/CompilationFailedError.md) if compilation fails.
 
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `inputFile` | `string` | Source file to compile. |
+| `outputFile` | `string` | Output file name (or path). |
+
+#### Returns
+
+`Promise`<{ `file`: `string`  }\>
+
+#### Defined in
+
+[src/compile.ts:12](https://github.com/synthetic-borealis/pascal-utils.js/blob/9699703/src/compile.ts#L12)
+
+___
+
+## Compiler Detection Functions
+
+### checkCompiler
+
+▸ **checkCompiler**(`compilerName?`): `Promise`<{ `version`: `string`  }\>
+
+Checks whether the Free Pascal compiler is present in the system path.
+
+**`Throws`**
+
+[CompilerNotFoundError](classes/CompilerNotFoundError.md) if no compiler is found.
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `compilerName` | `string` | `'fpc'` | The name of the compiler executable. |
+
+#### Returns
+
+`Promise`<{ `version`: `string`  }\>
+
+#### Defined in
+
+[src/checkCompiler.ts:12](https://github.com/synthetic-borealis/pascal-utils.js/blob/9699703/src/checkCompiler.ts#L12)

@@ -1,13 +1,15 @@
-const childProcess = require('child_process');
-const CompilerNotFoundError = require('./errors/compilerNotFoundError');
-const isVersionString = require('./utils/validation/isVersionString');
+import * as childProcess from 'child_process';
+import CompilerNotFoundError from './errors/compilerNotFoundError';
+import isVersionString from './utils/validation/isVersionString';
 
 /**
  * Checks whether the Free Pascal compiler is present in the system path.
+ * @category Compiler Detection
  * @param {string} compilerName - The name of the compiler executable.
  * @returns {Promise<{version: string}>}
+ * @throws {@link CompilerNotFoundError} if no compiler is found.
  */
-function checkCompiler(compilerName = 'fpc') {
+export default function checkCompiler(compilerName = 'fpc'): Promise<{ version: string }> {
   return new Promise((resolve, reject) => {
     childProcess.exec(`${compilerName} -iV`, (error, stdout) => {
       if (error) {
@@ -21,5 +23,3 @@ function checkCompiler(compilerName = 'fpc') {
     });
   });
 }
-
-module.exports = checkCompiler;
