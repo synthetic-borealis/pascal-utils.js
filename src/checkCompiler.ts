@@ -4,8 +4,10 @@ import isVersionString from './utils/validation/isVersionString';
 
 /**
  * Checks whether the Free Pascal compiler is present in the system path.
+ * @category Compiler Detection
  * @param {string} compilerName - The name of the compiler executable.
  * @returns {Promise<{version: string}>}
+ * @throws {@link CompilerNotFoundError} if no compiler is found.
  */
 export default function checkCompiler(compilerName = 'fpc'): Promise<{ version: string }> {
   return new Promise((resolve, reject) => {
