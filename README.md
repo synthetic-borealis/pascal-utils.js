@@ -43,7 +43,6 @@ Run `compile(inputFile, outputFile).then(...)` to compile a program.
 
 ```javascript
 const fs = require('fs/promises');
-const process = require('node:process');
 const pascalUtils = require('pascal-utils');
 
 describe('Compiler detection', () => {
@@ -66,5 +65,4 @@ describe('Compilation', () => {
     fs.unlink(exeName),
   ]));
 });
-
 ```
