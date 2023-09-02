@@ -16,13 +16,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: mskelton/setup-yarn@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 'v16.x'
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
       - name: Install Free Pascal
         run: sudo apt-get install --no-install-recommends -y fpc
+      - run: npm ci
+      - run: npm run build --if-present
       - name: Run tests
-        run: yarn coverage
+        run: npm run coverage
       - name: Send coverage info to Codecov
         uses: codecov/codecov-action@v3
         with:
