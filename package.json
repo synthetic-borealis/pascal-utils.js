@@ -3,7 +3,7 @@
   "author": "Elhanan Flesch",
   "description": "Utility functions for compilation of simple pascal programs, with the Free Pascal compiler, in Node.js.",
   "license": "MIT",
-  "version": "2.0.2",
+  "version": "2.0.1",
   "homepage": "https://github.com/synthetic-borealis/pascal-utils.js",
   "repository": {
     "type": "git",
@@ -30,10 +30,10 @@
     "docs": "typedoc",
     "build": "tsc",
     "clean": "rimraf lib/ types/",
-    "prepack": "yarn clean && yarn build",
-    "postpack": "yarn clean",
-    "prepublish": "in-publish && yarn clean && yarn build || not-in-publish",
-    "postpublish": "yarn clean"
+    "prepack": "npm run clean && npm run build",
+    "postpack": "npm run clean",
+    "prepublish": "in-publish && npm run clean && npm run build || not-in-publish",
+    "postpublish": "npm run clean"
   },
   "devDependencies": {
     "@types/jest": "^29.5.4",
